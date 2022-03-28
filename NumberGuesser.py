@@ -4,22 +4,22 @@ import random
 
 #what game to play
 while True:
-    Game = input("Which game would you like to play? (Enter user guess, computer guess, computer user guess, or type q to quit) ")
+    Game = input("Which game would you like to play? (Enter user guess(ug), computer guess(cg), computer user guess(cug), or type (q) to quit) ")
 
 #user guess game
-    if Game == "user guess":
+    if Game == "ug":
         SecretNumber = randint(1, 100)
         Guess = int(input("Try and guess the secret number. It's from 1 to 100: "))
         while Guess != SecretNumber:
             if Guess < SecretNumber:
                 print ("The secret number is higher boi!")
             elif Guess > SecretNumber:
-                print ("The secret number is less common man!")
+                print ("The secret number is less come on man!")
             Guess = int(input("Guess again: "))
         print("You got it. YES SIRRRRRRR!!!!!")
 
 #computer guess game (my version of the game)
-    elif Game == "computer guess":
+    elif Game == "cg":
         SecretNumber = int(input("Make a secret number? (1-100): "))
         x = 1
         y = 100
@@ -36,16 +36,16 @@ while True:
         print("Your secret number was found. It took the computer " + str(NumberOfGuesses) + " trys to find it. The number was " + str(Guess) + "!")
 
 #user computer guess game (the way they did it on the tutorial)
-    elif Game == "computer user guess":
+    elif Game == "cug":
         x = 1
         y = 100
         Guess = randint(x, y)
         while x != y:
             print(Guess)
             UpDown = input("was the guess too big(b), too small(s) or like actually right(r) ")
-            if UpDown == "b":
+            if UpDown == "s":
                 x = Guess + 1
-            elif UpDown == "s":
+            elif UpDown == "b":
                 y = Guess - 1
             elif UpDown == "r":
                 break
@@ -55,6 +55,10 @@ while True:
 #quit key
     elif Game == "q":
         break
+
+    else:
+        print("Invalid input")
+        continue
 
 #quit statement 
 print ("we done. Come back soon!")
