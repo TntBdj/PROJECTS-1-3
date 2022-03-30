@@ -1,0 +1,36 @@
+def Story1():
+    print (f"If you are {Adj1} to {Name} the next time you meet. A {Adj2} footed {Noun1} \
+will approach you and give you the {Adj3} {Verb1} in the world. \
+Then you will gain the {Adj4} {Noun2} of your whole life.") 
+
+def Story2():
+    print (f"I have the biggest crush on {Name}. I would do anything for them. \
+I would {Verb1}, if any {Noun1} came near them. I am the {Adj2} simp in the world, \
+because even if {Name} is {Verb2}, I’d still {Verb2} with them") 
+
+def Story3():
+    print (f"If you are {Adj1} to the next person you meet. A {Adj2} footed {Noun1} \
+will approche you and give you the {Adj3} {Verb1} in the world. \
+Then you will gain the {Adj4} {Noun2} of your whole life.") 
+
+while True:
+    Story = input("what story do you want to write? (1), (2), (3), or (q) to quit: " )
+    Adj1 = input("First adjective: ")
+    Adj2 = input("Second adjective: ")
+    Adj3 = input("Third adjective: ")
+    Adj4 = input("fourth adjective: ")
+    Noun1 = input("First noun: ")
+    Noun2 = input("second noun: ")
+    Verb1 = input("First Verb: ")
+
+    if Story == "1":
+        Story1()
+    elif Story == "2":
+        Story2()
+    elif Story == "3":
+        Story3()
+    elif Story == "q":
+        print("See you next time!")
+        break
+    else:
+        print("Input invalid.")
